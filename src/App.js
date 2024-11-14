@@ -71,6 +71,7 @@ const App = () => {
     if(q.length > 3){
       const query = await searchMovie(q);
       setPopularMovies(query.results)
+      console.log({q})
     }
   };
 
@@ -78,6 +79,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <h1>WEBSITE FILM BEN GEMINI OX</h1>
+        <p>API integration with <a href='https://www.themoviedb.org/'>TMDB</a></p>
         <input
           placeholder="Find your discover..."
           className="Movie-search"
