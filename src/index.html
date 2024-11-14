@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TMDB API Test</title>
+</head>
+<body>
+  <script>
+    const apiKey = 'b61d27808b28b067990bd87a1d6b284c';
+    const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error:', error));
+  </script>
+</body>
+</html>
